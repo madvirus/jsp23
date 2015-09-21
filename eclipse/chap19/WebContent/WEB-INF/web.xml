@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+
+    <filter>
+        <filter-name>NullParameter</filter-name>
+        <filter-class>filter.NullParameterFilter</filter-class>
+        <init-param>
+            <param-name>parameterNames</param-name>
+            <param-value>id,name</param-value>
+        </init-param>
+    </filter>
+
+	<filter-mapping>
+		<filter-name>NullParameter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>LoginCheck</filter-name>
+		<filter-class>filter.LoginCheckFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>LoginCheck</filter-name>
+		<url-pattern>/board/*</url-pattern>
+	</filter-mapping>
+
+</web-app>
