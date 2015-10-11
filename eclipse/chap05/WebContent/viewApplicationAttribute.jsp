@@ -4,9 +4,9 @@
 <head><title>application 기본 객체 속성 보기</title></head>
 <body>
 <%
-	Enumeration attrEnum = application.getAttributeNames();
+	Enumeration<String> attrEnum = application.getAttributeNames();
 	while(attrEnum.hasMoreElements() ) {
-		String name = (String)attrEnum.nextElement();
+		String name = attrEnum.nextElement();
 		Object value = application.getAttribute(name);
 %>
 application 속성 : <b><%= name %></b> = <%= value %> <br>
