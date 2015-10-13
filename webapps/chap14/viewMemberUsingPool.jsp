@@ -8,7 +8,7 @@
 <head><title>회원 목록</title></head>
 <body>
 
-MEMBMER 테이블의 내용
+MEMBER 테이블의 내용
 <table width="100%" border="1">
 <tr>
 	<td>이름</td><td>아이디</td><td>이메일</td>
